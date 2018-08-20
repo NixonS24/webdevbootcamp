@@ -1,0 +1,13 @@
+<h1>This is the resutls page</h1>
+
+<!--loop through and display new data-->
+
+
+
+<% for(var i = 0; i < data.Search.length; i++) { %>
+    <li>
+        <strong><%= data.Search[i].Title %></strong> - <%= data.Search[i].Year %>
+        </li>
+<%  } %>
+
+<a href='/search'>Search Again</a>

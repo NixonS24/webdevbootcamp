@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<div class = "ui main text container segment">
+    <div class="ui huge header"><%=blog.title%></div>
+    <div class="ui top attached">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%=blog.image%>">
+            <div class="content">
+                <span><%=blog.created.toDateString()%></span>
+            </div>
+            <div class="decription">
+                <p><%- blog.body %></p> 
+                <!--This is a small update, but the dash tell the code to render html in the database-->
+            </div>
+            <a class="ui orange basic button" hre="/blogs/<%=blog._id%>/edit">
+                Edit
+            </a>
+            <form id="delete" action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+                <Button class="ui red basic button">
+                    Delete
+                </Button>
+            </form>
+        </div>
+    </div>
+        
+</div>
+
+<% include partials/footer %>
+
+<!--This notation blog[title] allow us to easily assign body as key value pair to title which is then processed by our middleware-->
