@@ -12,9 +12,10 @@ var express         = require('express'),       //Base Framework that provides l
 
 
 //Configure Usage
-//This enviromental variables needs to be configured  
+//This enviromental variables needs to be configured 
 var url = process.env.DATABASEURL || "mongodb://localhost/INSERTNAME"; //Local Database Requires MongoDB to be running - and it will create database of this name if one does not exist
-mongoose.connect(url);
+mongoose.connect(url);              //The code directly above gives us a backup in case our enviroment variables is not working. 
+//Enviorment variables are setup directly with heroku dashboard and local through terminal command "export DATABASEURL=mongodb://localhost/$databsename"
 
 app.use(bodyParser.urlencoded({extended: true}));    //Connfigures the usage of app to automatically use Body-Parser as its middleware
 app.use(express.static(__dirname + "/public"));     //Automatically load assets in public folder for use, however remember this needs to be linked in our sheets (usually in our header file)r)

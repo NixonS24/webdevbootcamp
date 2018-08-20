@@ -11,9 +11,11 @@ New Project - using the MEAN* Stack
     - there is a list of common packages in "packageDescription.md"
     - remember the ''...--save' as that will automatically add the package to your package.json
 3) Configure Database 
-    - Good instruction on Udemy Webdevelopment for MongoDb
+    - We will start with local but eventual we will a extenal/production server as well.
+    - MongoDB will autmoatically create a local database fromt the code we have sent, if confused good instruction on Udemy Webdevelopment for MongoDb
     - Also look through the docs <https://community.c9.io/t/setting-up-mongodb/1717>
     - And remember the database needs to be running in a terminal window to access the database - "./mongod" 
+    - To setup external server, we will use a combination of heroku and mLab - notes in dropbox.
 4) Create base File 
     - The file and folder structure should have already been created for you.
     - However, if you are lost regarding ejs is a good tutorial on <•	https://scotch.io/tutorials/use-ejs-to-template-your-node-application> and look to your notes.
@@ -26,7 +28,7 @@ New Project - using the MEAN* Stack
     
 Also note, if you get stuck you have notes - "Udemy Notes" in dropbox.
 MEAN is short for MEAN Stack:
-    Mongo - DB
+    Mongo - Database both local and external through mLab.
     Express - 
     Angual - control user states
     Node - javascript backend
