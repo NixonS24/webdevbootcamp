@@ -7,17 +7,19 @@ New Project - using the MEAN* Stack
     - Naivgate through walkthough
     - Change Entry point from 'index.js' to 'app.js'
 2) Install most common packages
-    - 'npm install express mongoose body-parser ejs --save'
-    - there is a list of common packages in "packageDescription.md"
+    - 'npm install express body-parser ejs --save', the save will add it automtaically to our package json
+    - Also nodemon is really good for testing is "npm install -g nodemon --save"
+    - There is a list of common packages in "packageDescription.md"
     - remember the ''...--save' as that will automatically add the package to your package.json
 3) Configure Database 
     - We will start with local but eventual we will a extenal/production server as well.
     - MongoDB will autmoatically create a local database fromt the code we have sent, if confused good instruction on Udemy Webdevelopment for MongoDb
     - Also look through the docs <https://community.c9.io/t/setting-up-mongodb/1717>
     - And remember the database needs to be running in a terminal window to access the database - "./mongod" 
-    - To setup external server, we will use a combination of heroku and mLab - notes in dropbox.
+    - To setup external server, we will use a combination of heroku and mLab - notes in dropbox (importantly remember to add "start: node app.js")
 4) Create base File 
-    - The file and folder structure should have already been created for you.
+    - We need to create the base file structure, which can be copied over or created manually (i.e. "app.js")
+    - Then git init, and link to a repositery
     - However, if you are lost regarding ejs is a good tutorial on <•	https://scotch.io/tutorials/use-ejs-to-template-your-node-application> and look to your notes.
 5) Preview
     - We can run a preview through the both the browser and the our Cloud9 Enviroment.

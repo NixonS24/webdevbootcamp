@@ -20,6 +20,7 @@ var express         = require("express"),
     indexRoutes     = require("./routes/index"); //general name for routes that have clear association
     
 var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp";
+console.log(process.env.DATABASEURL);
 mongoose.connect(url);
 //This is not good coding practice to have a backup in case our server breaks
 

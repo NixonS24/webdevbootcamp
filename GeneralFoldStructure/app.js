@@ -14,11 +14,12 @@ var express         = require('express'),       //Base Framework that provides l
 //Configure Usage
 //This enviromental variables needs to be configured 
 var url = process.env.DATABASEURL || "mongodb://localhost/INSERTNAME"; //Local Database Requires MongoDB to be running - and it will create database of this name if one does not exist
+console.log(process.env.DATABASEURL);
 mongoose.connect(url);              //The code directly above gives us a backup in case our enviroment variables is not working. 
 //Enviorment variables are setup directly with heroku dashboard and local through terminal command "export DATABASEURL=mongodb://localhost/$databsename"
 
 app.use(bodyParser.urlencoded({extended: true}));    //Connfigures the usage of app to automatically use Body-Parser as its middleware
-app.use(express.static(__dirname + "/public"));     //Automatically load assets in public folder for use, however remember this needs to be linked in our sheets (usually in our header file)r)
+app.use(express.static(__dirname + "/public"));     //Automatically load assets in public folder for use, file paths for assets are automtically looking in public so usuallu just need "/image/logo.png"
 app.set("view engine","ejs");                       //Sets all file in Folder Views to type ".ejs" which means you can drop this from your render string
 app.use(methodOverride("_method"));                 //Tells the method app - to use the middleware when it sees the string "_method"
 
@@ -60,7 +61,11 @@ Model.create({
     //Update Route
     //Destroy Route
 
-
+//Landing Route
+app.get("/", function(req, res){
+    res.send("landing page is working");
+});   
+//This will be refactored to route.get if we put it in to differnt folder structures. 
 
 //Console Listening
 app.listen(process.env.PORT,process.env.IP,function(){

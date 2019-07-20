@@ -79,7 +79,7 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req,res){
         if(error){
             res.redirect("/campgrounds");
         } else {
-            res.redirect("/campgrounds/" + req.params.id)
+            res.redirect("/campgrounds/" + req.params.id);
         }
     });
 });

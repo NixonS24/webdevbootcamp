@@ -22,16 +22,18 @@ var blogSchema = new mongoose.Schema({
 });
 var Blog = mongoose.model("Blog",blogSchema);
 
+
+
 //RESTful Route
 app.get("/", function(req,res){
-    res.redirect("/blogs")
+    res.redirect("/blogs");
 });
 
 // Index Routes
 app.get("/blogs", function(req,res){
     Blog.find({},function(error,blogs){
         if (error){
-            console.log('ERROR')
+            console.log('ERROR');
         } else {
             res.render("index", {blogs:blogs});
         }
@@ -50,7 +52,7 @@ app.post("/blogs", function(req, res){
     req.body.blog.body = req.sanitize(req.body.blog.body);
     Blog.create(req.body.blog, function(error, newBlogPost){
         if (error){
-            res.render("new")
+            res.render("new");
         } else {
             res.redirect("/blogs");
         }
@@ -65,7 +67,7 @@ app.get("/blogs/:id", function(req,res){
             console.log(error);
             res.redirect("/blogs");
         } else {
-            res.render("show", {blog: foundBlog})
+            res.render("show", {blog: foundBlog});
         }
     });
 });
@@ -76,7 +78,7 @@ app.get("/blogs/:id/edit", function(req, res){
         if(error){
             res.redirect("/blogs");
         } else {
-            res.render("edit", {blog: foundBlog})
+            res.render("edit", {blog: foundBlog});
         }
     });
 });
