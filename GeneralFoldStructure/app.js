@@ -8,7 +8,7 @@ var express         = require('express'),       //Base Framework that provides l
     app             = express(),
     bodyParser      = require('body-parser'),   //Parse incoming requests (i.e. your post requests) into middleware (easy to use frameworks)
     mongoose        = require('mongoose'),      //Adds a javascript layer over our database (mongodb) and creates base functionality
-    methodOverride  = require("method-override")//Provides a middleware that adds a level of functinality to items that can only use "get" or "post" requests - i.e. for forms
+    methodOverride  = require("method-override"); //Provides a middleware that adds a level of functinality to items that can only use "get" or "post" requests - i.e. for forms
 
 
 //Configure Usage
