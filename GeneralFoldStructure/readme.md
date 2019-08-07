@@ -6,8 +6,9 @@ New Project - using the MEAN* Stack
 1) 'npm init'
     - Naivgate through walkthough
     - Change Entry point from 'index.js' to 'app.js'
+	- We can tell this has worked through the existenc eof the "package.json" file
 2) Install most common packages
-    - 'npm install express body-parser ejs --save', the save will add it automtaically to our package json
+    - 'npm install express body-parser ejs --save', the save wilnpl add it automtaically to our package json
     - Also nodemon is really good for testing is "npm install -g nodemon --save"
     - There is a list of common packages in "packageDescription.md"
     - remember the ''...--save' as that will automatically add the package to your package.json
